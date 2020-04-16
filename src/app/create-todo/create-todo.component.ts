@@ -12,10 +12,8 @@ export class CreateTodoComponent implements OnInit {
 
   ngOnInit() {
   }
-  addTodo():void {
-    this.todoService.addTodo({
-      title: this.todoTitle
-    });
+  addTodo(ITodo):void {
+    this.todoService.addTodo(ITodo);
     
     // resets our todoTitle variable to an empty string
     this.todoTitle = '';
