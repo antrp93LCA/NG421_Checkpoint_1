@@ -10,12 +10,14 @@ import { ITodo } from '../interfaces/itodo';
   styleUrls: ["./todo.component.css"],
 })
 export class TodoComponent implements OnInit {
+  
   @Input() todo :ITodo;
+ 
   constructor(
     private todoService: TodoService,
     private modalService: NgbModal
   ) {}
-  statuses: string[] = [];
+ 
   todoTitle = "";
   isEditing = false;  
   ngOnInit() {}
@@ -33,6 +35,6 @@ export class TodoComponent implements OnInit {
   }
 
   getStatuses(){
-    return this.statuses = this.todoService.getStatuses();
+    return this.todoService.getStatuses();
   }
 }
