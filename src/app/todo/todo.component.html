@@ -5,7 +5,10 @@
     *ngIf="isEditing"
     [(ngModel)]="todo.title"
     (keyup.enter)="isEditing = false"
-  />
+  >
+  <div>
+    <label>{{ todo.description }}</label>
+  </div>
   <select [(ngModel)]="todo.status">
     <option *ngFor="let status of getStatuses()">
       {{ status }}

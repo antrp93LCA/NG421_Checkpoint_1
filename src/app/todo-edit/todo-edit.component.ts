@@ -20,4 +20,8 @@ export class TodoEditComponent implements OnInit {
   yes() {
     this.modalInstance.close(this.newDescription);
   }
+
+  cancel(){
+    this.modalInstance.close(this.todo.description);
+  }
 }
