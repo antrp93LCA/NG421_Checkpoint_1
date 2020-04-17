@@ -15,7 +15,9 @@ export class TodoComponent implements OnInit {
     private todoService: TodoService,
     private modalService: NgbModal
   ) {}
+  statuses: string[] = [];
   todoTitle = "";
+  isEditing = false;  
   ngOnInit() {}
 
   async deleteTodo(todo) {
@@ -28,5 +30,9 @@ export class TodoComponent implements OnInit {
         this.todoService.deleteTodo(todo);
       }
     } catch (ex) {}
+  }
+
+  getStatuses(){
+    return this.statuses = this.todoService.getStatuses();
   }
 }

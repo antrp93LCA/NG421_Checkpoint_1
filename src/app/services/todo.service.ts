@@ -15,7 +15,11 @@ export class TodoService {
       createdAt: new Date(),
     },
   ];
-  statuses: string[] = [];
+  statuses: string[] = [
+    'Todo',
+    'Doing',
+    'Done'
+  ];
 
   constructor() {}
   getTodos(status?) {

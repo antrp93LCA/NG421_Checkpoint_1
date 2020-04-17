@@ -13,6 +13,7 @@ export class TodoListComponent implements OnInit {
 
   @Input() status: any
 
+  
   get todoList() {
     return this.todoService.getTodos(this.status);
   }
