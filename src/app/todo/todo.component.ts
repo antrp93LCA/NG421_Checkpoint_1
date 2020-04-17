@@ -37,4 +37,6 @@ export class TodoComponent implements OnInit {
   getStatuses(){
     return this.todoService.getStatuses();
   }
+
+  
 }
