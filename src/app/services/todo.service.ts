@@ -41,4 +41,5 @@ export class TodoService {
   getStatuses() {
     return this.statuses;
   }
+
 }

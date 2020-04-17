@@ -1,1 +1,9 @@
-<p>todo-edit works!</p>
+<div class="form-group">
+    <!-- You will want to change this label later on but for now it can stay as-is -->
+    <textarea name="edit" id="" cols="30" rows="10" [(ngModel)]="todo.description"></textarea>
+    <div class="input-group">
+      <div class="input-group-append">
+          <button type="button" class="btn btn-danger btn-sm" (click)="yes()">Save</button>
+      </div>
+    </div>
+  </div>
