@@ -12,9 +12,11 @@ import { BoardComponent } from './board/board.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoTableComponent } from './todo-table/todo-table.component';
-import {MatTableModule} from '@angular/material'
+import {MatTableModule} from '@angular/material/table';
 
-const routes = [];
+const routes = [{path: "table", component: TodoTableComponent},
+                {path: "board", component: BoardComponent},
+                {path: "**", component: BoardComponent}];
 const appRoutes = RouterModule.forRoot(routes);
 
 @NgModule({
@@ -27,10 +29,11 @@ const appRoutes = RouterModule.forRoot(routes);
     BoardComponent,
     TodoEditComponent,
     TodoTableComponent,
-    MatTableModule
   ],
   imports: [
     BrowserModule,
+    MatTableModule,
+
     appRoutes,
     FormsModule,
     NgbModule,
