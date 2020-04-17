@@ -9,21 +9,20 @@ import { ITodo } from '../interfaces/itodo';
 })
 export class CreateTodoComponent implements OnInit {
 
-  todo :ITodo
-  
+  todo : ITodo
   
   constructor(private todoService : TodoService) { }
 
   ngOnInit() {
   }
 
-  addTodo(ITodo):void {
-    this.todoService.addTodo(ITodo);
-    
-    // resets our todoTitle variable to an empty string
-    this.todo.title = '';
+  addTodo(todo: ITodo):void {
     this.todo.status = 'Todo';
     this.todo.createdAt = new Date();
+    this.todoService.addTodo(todo);
+    
+    this.todo.title = '';
+    // resets our todoTitle variable to an empty string
   }
 
 }
