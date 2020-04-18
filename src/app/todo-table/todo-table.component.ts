@@ -24,9 +24,17 @@ export class TodoTableComponent implements OnInit {
   
   constructor(private todoService: TodoService) { }
   
+  
   ngOnInit() {
+    this.sort.direction = "asc";
+    this.sort.active = this.displayedColumns[0];
+    
     this.dataSource = new MatTableDataSource(this.todoList);
     this.dataSource.sort = this.sort;
+  }
+
+  applyFilter(filterValue: string){
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
 }

@@ -14,6 +14,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoTableComponent } from './todo-table/todo-table.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 const routes = [{path: "table", component: TodoTableComponent},
                 {path: "board", component: BoardComponent},
@@ -35,6 +37,8 @@ const appRoutes = RouterModule.forRoot(routes);
     BrowserModule,
     MatTableModule,
     MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
 
     appRoutes,
     FormsModule,
