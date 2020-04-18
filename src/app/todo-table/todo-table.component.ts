@@ -6,7 +6,7 @@ import { TodoService } from '../services/todo.service';
 @Component({
   selector: 'app-todo-table',
   templateUrl: './todo-table.component.html',
-  styles: []
+  styleUrls: ['./todo-table.component.css'],
 })
 export class TodoTableComponent implements OnInit {
 
@@ -14,7 +14,7 @@ export class TodoTableComponent implements OnInit {
     return this.todoService.getTodos();
   }
 
-  displayedColumns: string[] = ['id'];
+  displayedColumns: string[] = ['id', 'title','status', 'description','createdAt'];
 
   constructor(private todoService: TodoService) { }
 
