@@ -13,6 +13,7 @@ import { TodoEditComponent } from './todo-edit/todo-edit.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoTableComponent } from './todo-table/todo-table.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material';
 
 const routes = [{path: "table", component: TodoTableComponent},
                 {path: "board", component: BoardComponent},
@@ -33,6 +34,7 @@ const appRoutes = RouterModule.forRoot(routes);
   imports: [
     BrowserModule,
     MatTableModule,
+    MatSortModule,
 
     appRoutes,
     FormsModule,
