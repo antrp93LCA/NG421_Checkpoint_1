@@ -15,4 +15,9 @@ export class ConfirmationModalComponent implements OnInit {
     this.modalInstance.close("yes");
  }
 
+ cancel(){
+  this.modalInstance.close("cancel");
+}
+
+
 }

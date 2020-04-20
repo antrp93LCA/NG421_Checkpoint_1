@@ -7,6 +7,8 @@
       [(ngModel)]="todo.title"
       (keyup.enter)="isEditing = false"
     />
+
+    
     <label class="flex-shrink-1">{{ todo.description }}</label>
     <div class="d-flex flex-fill flex-row-reverse my-3">
       <select [(ngModel)]="todo.status">
@@ -35,7 +37,7 @@
       <button
         type="button"
         (click)="TodoEdit(todo)"
-        class="btn btn-secondary btn-sm"
+        class="btn btn-secondary btn"
       >
         Edit
       </button>
